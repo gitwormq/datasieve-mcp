@@ -155,7 +155,10 @@ const conditionShape = z
 
 // ---- server ---------------------------------------------------------------------
 
-const server = new McpServer({ name: 'datasieve', version: '0.4.0' });
+const VERSION = JSON.parse(
+  readFileSync(new URL('../package.json', import.meta.url), 'utf8'),
+).version as string;
+const server = new McpServer({ name: 'datasieve', version: VERSION });
 
 server.registerTool(
   'create_watch',
