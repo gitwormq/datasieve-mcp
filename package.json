@@ -15,7 +15,8 @@
     "dist",
     "skill",
     "server.json",
-    "README.md"
+    "README.md",
+    "llms-install.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
