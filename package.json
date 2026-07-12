@@ -1,0 +1,54 @@
+{
+  "name": "datasieve-mcp",
+  "version": "0.4.1",
+  "description": "MCP server for DataSieve \u2014 standing infrastructure for agents over x402: on-chain watches, url-change web monitoring, dead-man switches, cron schedules, coordination, signed receipts. No account; your wallet key stays on your machine.",
+  "license": "MIT",
+  "repository": "github:gitwormq/datasieve-mcp",
+  "homepage": "https://datasieve.xyz",
+  "mcpName": "io.github.gitwormq/datasieve",
+  "type": "module",
+  "bin": {
+    "datasieve-mcp": "./dist/main.js"
+  },
+  "main": "./dist/main.js",
+  "files": [
+    "dist",
+    "skill",
+    "server.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/main.ts",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "mcp",
+    "x402",
+    "agents",
+    "monitoring",
+    "webhooks",
+    "dead-man-switch",
+    "cron",
+    "scheduler",
+    "url-change",
+    "web-monitoring",
+    "coordination",
+    "receipts",
+    "base"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "@x402/core": "2.18.0",
+    "@x402/evm": "2.18.0",
+    "@x402/fetch": "2.18.0",
+    "viem": "2.55.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "4.23.0",
+    "typescript": "5.9.3"
+  }
+}
