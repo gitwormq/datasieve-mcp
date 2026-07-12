@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.gitwormq/datasieve",
-  "description": "Standing infrastructure for agents over x402: on-chain watches on Base, url-change web monitoring, dead-man switches, cron schedules, multi-agent coordination, signed receipts. No account — wallet is identity.",
+  "description": "On-chain watches, web-page monitors, dead-man switches, cron, and agent coordination, paid via x402.",
   "repository": {
     "url": "https://github.com/gitwormq/datasieve-mcp",
     "source": "github"
@@ -14,11 +14,13 @@
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "datasieve-mcp",
       "version": "0.4.1",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "name": "DATASIEVE_PRIVATE_KEY_FILE",
-          "description": "Path to a file holding a burner wallet key (0x…) with USDC on Base. Optional — free tools work without it.",
+          "description": "Path to a file holding a burner wallet key (0x\u2026) with USDC on Base. Optional \u2014 free tools work without it.",
           "isRequired": false,
           "isSecret": false
         },
